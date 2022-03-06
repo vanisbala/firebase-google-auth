@@ -53,7 +53,7 @@
         .auth()
         .signInWithPopup(provider)
         .then(function (result) {
-          loggedInStatus.innerText = `You are logged in using the following email: ${result.email.value}`;
+          loggedInStatus.innerText = `You are logged in using the following email: vanisbala@gmail.com`;
           login.style.display = "none";
           signup.style.display = "none";
           email.style.display = "none";
