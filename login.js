@@ -53,7 +53,7 @@
         .auth()
         .signInWithPopup(provider)
         .then(function (result) {
-          loggedInStatus.innerText = `You are logged in using the following email:${result.user.email`;
+          loggedInStatus.innerText = `You are logged in using the following email:${result.email}`;
           login.style.display = "none";
           signup.style.display = "none";
           email.style.display = "none";
@@ -76,7 +76,7 @@
     firebase.auth().onAuthStateChanged((firebaseUser) => {
       if (firebaseUser) {
         console.log(firebaseUser);
-        loggedInStatus.innerText = `You are logged in using the following email: ${email}`;
+        loggedInStatus.innerText = `You are logged- in using the following email: ${firebaseUser.email}`;
         logout.style.display = "inline";
         login.style.display = "none";
         signup.style.display = "none";
